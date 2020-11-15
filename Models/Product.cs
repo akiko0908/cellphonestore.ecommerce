@@ -38,12 +38,15 @@ namespace CellphoneStoreEcommerce.Models
 
         public Product() { }
 
-        public Product(string product_Name, double product_Price, int product_Quantity, string product_OS)
+        public Product(string product_Name, double product_Price, int product_Quantity, string product_OS, string product_Description)
         {
             this.product_Name = product_Name;
             this.product_Price = product_Price;
             this.product_Quantity = product_Quantity;
             this.product_OS = product_OS;
+            this.product_Description = product_Description;
         }
+
+
     }
 }
