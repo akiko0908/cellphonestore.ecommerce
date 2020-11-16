@@ -22,6 +22,8 @@ namespace CellphoneStoreEcommerce.Models
 
         [Required(ErrorMessage = "Nhập thông tin cho trường này!!!")]
         [Display(Name = "Giá sản phẩm")]
+        [DataType(DataType.Currency)]
+        // [DisplayFormat(DataFormatString = "{0:C2}")]     /* Cách thứ 2 để định dạng tiền tệ */
         [Range(10000, 100000000, ErrorMessage = "Giá thấp nhất là 10,000vnđ và tối đa là 100,000,000vnđ")]
         public double product_Price { get; set; }
 
@@ -46,7 +48,5 @@ namespace CellphoneStoreEcommerce.Models
             this.product_OS = product_OS;
             this.product_Description = product_Description;
         }
-
-
     }
 }
