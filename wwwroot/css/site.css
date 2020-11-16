@@ -152,3 +152,7 @@ body {
 .dropdown__item:hover {
     background-color: cyan;
 }
+
+li.dropdown__list>a.dropdown__text {
+    text-decoration: none;
+}
