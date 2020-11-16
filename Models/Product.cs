@@ -26,7 +26,7 @@ namespace CellphoneStoreEcommerce.Models
         [DataType(DataType.Currency)]
         // [DisplayFormat(DataFormatString = "{0:C2}")]     /* Cách thứ 2 để định dạng tiền tệ */
         [Range(10000, 100000000, ErrorMessage = "Giá thấp nhất là 10,000vnđ và tối đa là 100,000,000vnđ")]
-        public double product_Price { get; set; }
+        public decimal product_Price { get; set; }
 
         [Required(ErrorMessage = "Nhập thông tin cho trường này!!!")]
         [Display(Name = "Số lượng sản phẩm")]
@@ -48,7 +48,7 @@ namespace CellphoneStoreEcommerce.Models
 
         // constructror
         public Product() { }
-        public Product(string product_Name, double product_Price, int product_Quantity, string product_OS, string product_Description)
+        public Product(string product_Name, decimal product_Price, int product_Quantity, string product_OS, string product_Description)
         {
             this.product_Name = product_Name;
             this.product_Price = product_Price;
