@@ -19,5 +19,8 @@ namespace CellphoneStoreEcommerce.Models
 
         [Display(Name = "Tên loại sản phẩm")]
         public string proCategory_Name { get; set; }
+
+        // Get list product in ProductCategories
+        public IEnumerable<Product> lsProducts { get; set; }
     }
 }

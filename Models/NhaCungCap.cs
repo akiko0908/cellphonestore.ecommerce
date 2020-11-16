@@ -13,6 +13,14 @@ namespace CellphoneStoreEcommerce.Models
 {
     public class NhaCungCap
     {
+        [Key]
+        [Display(Name = "Mã nhà cung cấp")]
+        public int nhacungcap_ID { get; set; }
 
+        [Display(Name = "Tên nhà cung cấp")]
+        public string nhacungcap_Name { get; set; }
+
+        // get list of products by supplier code
+        public IEnumerable<Product> lsProducts { get; set; }
     }
 }
