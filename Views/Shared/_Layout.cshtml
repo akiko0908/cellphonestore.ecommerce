@@ -20,9 +20,24 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Điện
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown__select" asp-area="" asp-controller=""
+                                asp-action="">Điện
                                 thoại</a>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item">
+                                    <span class="dropdown__text">APPLE</span>
+                                </li>
+                                <li class="dropdown__item">
+                                    <span class="dropdown__text">SAMSUNG</span>
+                                </li>
+                                <li class="dropdown__item">
+                                    <span class="dropdown__text">OPPO</span>
+                                </li>
+                                <li class="dropdown__item">
+                                    <span class="dropdown__text">XIAOMI</span>
+                                </li>
+                            </ul>
                         </li>
 
                         <li class="nav-item">
