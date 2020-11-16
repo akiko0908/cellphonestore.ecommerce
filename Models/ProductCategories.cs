@@ -13,6 +13,11 @@ namespace CellphoneStoreEcommerce.Models
 {
     public class ProductCategories
     {
+        [Key]
+        [Display(Name = "Mã loại sản phẩm")]
+        public int proCategory_ID { get; set; }
 
+        [Display(Name = "Tên loại sản phẩm")]
+        public string proCategory_Name { get; set; }
     }
 }

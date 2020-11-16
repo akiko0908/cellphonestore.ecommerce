@@ -14,7 +14,8 @@ namespace CellphoneStoreEcommerce.Models
     public class Product
     {
         [Key]
-        public string product_ID { get; set; }
+        [Display(Name = "Mã sản phẩm")]
+        public int product_ID { get; set; }
 
         [Required(ErrorMessage = "Nhập thông tin cho trường này!!!")]
         [Display(Name = "Tên sản phẩm")]
@@ -37,6 +38,14 @@ namespace CellphoneStoreEcommerce.Models
 
         [Display(Name = "Mô tả sản phẩm")]
         public string product_Description { get; set; }
+
+
+        // Khóa ngoại
+        [ForeignKey("ProductCategories")]
+        public int proCategory_ID { get; set; }
+
+        [ForeignKey("NhaCungCap")]
+        public int nhacungcap_ID { get; set; }
 
         public Product() { }
 
