@@ -39,7 +39,6 @@ namespace CellphoneStoreEcommerce.Models
         [Display(Name = "Mô tả sản phẩm")]
         public string product_Description { get; set; }
 
-
         // Khóa ngoại
         [ForeignKey("ProductCategories")]
         public int proCategory_ID { get; set; }
@@ -47,8 +46,8 @@ namespace CellphoneStoreEcommerce.Models
         [ForeignKey("NhaCungCap")]
         public int nhacungcap_ID { get; set; }
 
+        // constructror
         public Product() { }
-
         public Product(string product_Name, double product_Price, int product_Quantity, string product_OS, string product_Description)
         {
             this.product_Name = product_Name;
