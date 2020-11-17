@@ -156,3 +156,16 @@ body {
 li.dropdown__list>a.dropdown__text {
     text-decoration: none;
 }
+
+.search-text input {
+    width: 244px;
+    height: 2.4rem;
+    border-radius: 0.7rem;
+}
+
+.search-text button {
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 0;
+    border-radius: 2rem;
+}
