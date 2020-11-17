@@ -157,15 +157,32 @@ li.dropdown__list>a.dropdown__text {
     text-decoration: none;
 }
 
+.search-text {
+    height: 40px;
+    border: 0.2rem solid #808080;
+    border-radius: 0.7rem;
+    background-color: none;
+}
+
 .search-text input {
     width: 244px;
-    height: 2.4rem;
-    border-radius: 0.7rem;
+    height: 30px;
+    border: none;
+    margin-left: 3px;
+}
+
+.search-text input:focus, .search-text input:active, .search-text input {
+    outline: 0;
+    outline-style: none;
+    outline-width: 0;
+    border-radius: 10px 0 0 0;
 }
 
 .search-text button {
-    width: 2.4rem;
-    height: 2.4rem;
-    border: 0;
-    border-radius: 2rem;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: transparent;
+    border: none;
 }
