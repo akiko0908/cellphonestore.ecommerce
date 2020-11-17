@@ -46,6 +46,9 @@ namespace CellphoneStoreEcommerce.Models
         [ForeignKey("NhaCungCap")]
         public int nhacungcap_ID { get; set; }
 
+        [Display(Name = "Hình ảnh")]
+        public string product_Image { get; set; }
+
         // constructror
         public Product() { }
         public Product(string product_Name, decimal product_Price, int product_Quantity, string product_OS, string product_Description)

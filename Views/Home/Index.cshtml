@@ -1,3 +1,28 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model IEnumerable<CellphoneStoreEcommerce.Models.Product>
+
+<h2>Sản phẩm</h2>
+
+<div class="row" style="margin-bottom: 5px;">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-6 md-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="~/images/@item.product_Image" alt="@item.product_Image">
+                <div class="card-body">
+                    <h4 class="card-title">@item.product_Name</h4>
+                    <h5 class="card-text">@item.product_Price</h5>
+                    <p class="card-text">@item.product_Description</p>
+                </div>
+                <div class="card-footer">
+                    <a asp-controller="Detail" asp-action="Index" asp-route-id="@item.product_ID" asp-route-name=""
+                        class="btn btn-primary">Detail</a>
+                    <a asp-action="Buy" asp-controller="ChiTietDonHang" asp-route-id="@item.product_ID"
+                        asp-route-name="@item.product_Name" class="btn btn-info">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
