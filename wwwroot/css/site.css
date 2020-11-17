@@ -186,3 +186,10 @@ li.dropdown__list>a.dropdown__text {
     background: transparent;
     border: none;
 }
+
+.search-text button:focus, .search-text button:active, .search-text button {
+    outline: 0;
+    outline-style: none;
+    outline-width: 0;
+    border-radius: 10px 0 0 0;
+}
