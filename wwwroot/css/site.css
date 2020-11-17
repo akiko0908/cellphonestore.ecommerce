@@ -87,7 +87,7 @@ body {
 }
 
 .dropdown:hover .dropdown__list {
-    display: block;
+    display: inline-block;
 }
 
 .dropdown__select {
