@@ -16,60 +16,57 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CellphoneStore</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-dark dropdown__select" asp-area="" asp-controller=""
-                                asp-action="">Điện
-                                thoại</a>
-                            <ul class="dropdown__list">
-                                <li class="dropdown__item">
-                                    <a asp-controlle="" asp-action="" class="dropdown__text">APPLE</a>
-                                </li>
-                                <li class="dropdown__item">
-                                    <a asp-controlle="" asp-action="" class="dropdown__text">SAMSUNG</a>
-                                </li>
-                                <li class="dropdown__item">
-                                    <a asp-controlle="" asp-action="" class="dropdown__text">OPPO</a>
-                                </li>
-                                <li class="dropdown__item">
-                                    <a asp-controlle="" asp-action="" class="dropdown__text">XIAOMI</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Phụ
-                                kiện</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Tablet</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Trả góp</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Liên lạc</a>
-                        </li>
-                    </ul>
-                </div>
-                <form asp-action="" asp-controller="" method="post">
-                    <div class="search-text">
-                        <input type="text" name="stringSearch" placeholder="Nhập sản phẩm cần tìm kiếm..." value="">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </div>
-                </form>
-                <partial name="_LoginPartial" />
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CellphoneStore</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-dark dropdown__select" asp-area="" asp-controller="" asp-action="">Điện
+                            thoại</a>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item">
+                                <a asp-controlle="" asp-action="" class="dropdown__text">APPLE</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a asp-controlle="" asp-action="" class="dropdown__text">SAMSUNG</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a asp-controlle="" asp-action="" class="dropdown__text">OPPO</a>
+                            </li>
+                            <li class="dropdown__item">
+                                <a asp-controlle="" asp-action="" class="dropdown__text">XIAOMI</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Phụ
+                            kiện</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Tablet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Trả góp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Liên lạc</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
+            <form asp-action="" asp-controller="" method="post">
+                <div class="search-text">
+                    <input type="text" name="stringSearch" placeholder="Nhập sản phẩm cần tìm kiếm..." value="">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+            <partial name="_LoginPartial" />
+        </div>
+    </nav>
 
     <div class="container">
         <main role="main" class="pb-3">
@@ -77,12 +74,14 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - CellphoneStoreEcommerce - <a asp-area="" asp-controller="Home"
-                asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    <div>
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2020 - CellphoneStoreEcommerce - <a asp-area="" asp-controller="Home"
+                    asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
