@@ -154,7 +154,7 @@ body {
     background-color: cyan;
 }
 
-li.dropdown__list>a.dropdown__text {
+a.dropdown__text {
     text-decoration: none;
 }
 
