@@ -51,13 +51,25 @@ namespace CellphoneStoreEcommerce.Models
 
         // constructror
         public Product() { }
-        public Product(string product_Name, decimal product_Price, int product_Quantity, string product_OS, string product_Description)
+        public Product(int product_ID,
+                       string product_Name,
+                       decimal product_Price,
+                       int product_Quantity,
+                       string product_OS,
+                       string product_Description,
+                       int nhacungcap_ID,
+                       int proCategory_ID,
+                       string product_Image)
         {
+            this.product_ID = product_ID;
             this.product_Name = product_Name;
             this.product_Price = product_Price;
             this.product_Quantity = product_Quantity;
             this.product_OS = product_OS;
             this.product_Description = product_Description;
+            this.nhacungcap_ID = nhacungcap_ID;
+            this.proCategory_ID = proCategory_ID;
+            this.product_Image = product_Image;
         }
     }
 }

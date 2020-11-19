@@ -1,0 +1,46 @@
+@{
+    ViewData["Title"] = "Details Product Page";
+}
+@model CellphoneStoreEcommerce.Models.Product
+
+<h2>Thông tin sản phẩm</h2>
+
+<div style="margin-top: 40px;">
+    <div class="row">
+        <div class="col-sm-4 shadow-lg bg-white rounded">
+            <img style="width: 100%; height: 100%;" src="~/images/@Model.product_Image" atl="@Model.product_Image"
+                width="200" height="200" />
+        </div>
+
+        <div class="col-sm-6">
+            <dl class="row">
+                <dt class="col-sm-6">
+                    @Html.DisplayNameFor(model =>model.product_Name)
+                </dt>
+                <dd class="col-sm-6">
+                    @Html.DisplayFor(model =>model.product_Name)
+                </dd>
+
+                <dt class="col-sm-6">
+                    @Html.DisplayNameFor(model => model.product_Price)
+                </dt>
+                <dd class="col-sm-6">
+                    @Html.DisplayFor(model => model.product_Price)
+                </dd>
+
+                <dt class="col-sm-6">
+                    @Html.DisplayNameFor(model => model.product_Description)
+                </dt>
+                <dd class="col-sm-6">
+                    @Html.DisplayFor(model => model.product_Description)
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="Product" class="btn btn-primary">Back to List</a>
+    <a asp-controller="ChiTietDonHang" asp-action="Buy" asp-route-id="@Model.product_ID" class="btn btn-warning"
+        style="margin-left: 20px;">Add To Cart</a>
+</div>
