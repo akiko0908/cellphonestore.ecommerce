@@ -13,21 +13,21 @@ namespace CellphoneStoreEcommerce.Models
 {
     public class OrderDetails
     {
-        [Display(Name = "Mã sản phẩm")]
         [Key]
         [Column(Order = 1)]
-        public int product_ID { get; set; }
-
         [Display(Name = "Mã hóa đơn")]
-        [Key]
-        [Column(Order = 2)]
         public int order_ID { get; set; }
 
-        [Display(Name = "Số lượng mua")]
-        public int Soluong { get; set; }
+        [Key]
+        [Column(Order = 2)]
+        [Display(Name = "Mã sản phẩm")]
+        public int product_ID { get; set; }
 
-        [ForeignKey("Customer")]
-        [Display(Name = "Mã khách hàng")]
-        public int customer_ID { get; set; }
+        [Display(Name = "Số lượng mua")]
+        public int orderdetails_Quantity { get; set; }
+
+        [Display(Name = "Giá bán")]
+        [DataType(DataType.Currency)]
+        public decimal orderdetails_ProductPrice { get; set; }
     }
 }

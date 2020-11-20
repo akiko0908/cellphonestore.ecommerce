@@ -39,15 +39,21 @@ namespace CellphoneStoreEcommerce.Models
         [Display(Name = "Mô tả sản phẩm")]
         public string product_Description { get; set; }
 
-        // Khóa ngoại
+        [Display(Name = "Hình ảnh")]
+        public string product_Image { get; set; }
+
+
+        // Foreign Key
         [ForeignKey("ProductCategories")]
         public int proCategory_ID { get; set; }
 
         [ForeignKey("NhaCungCap")]
         public int nhacungcap_ID { get; set; }
 
-        [Display(Name = "Hình ảnh")]
-        public string product_Image { get; set; }
+
+        // Get to list
+        public IEnumerable<Comment> lsComment { get; set; }
+
 
         // constructror
         public Product() { }
@@ -71,5 +77,6 @@ namespace CellphoneStoreEcommerce.Models
             this.proCategory_ID = proCategory_ID;
             this.product_Image = product_Image;
         }
+
     }
 }

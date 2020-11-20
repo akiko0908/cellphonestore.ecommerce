@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using CellphoneStoreEcommerce.Models;
 
 namespace CellphoneStoreEcommerce.Data
 {
@@ -15,6 +16,8 @@ namespace CellphoneStoreEcommerce.Data
         {
         }
 
+        DbSet<Product> Products { get; set; }
+        
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

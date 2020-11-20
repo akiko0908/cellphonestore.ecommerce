@@ -94,6 +94,17 @@ namespace CellphoneStoreEcommerce.Controllers
             return View(product);
         }
 
+        [HttpPost]
+        public IActionResult Search(string stringSearch)
+        {
+            if (!string.IsNullOrEmpty(stringSearch))
+            {
+                List<Product> resultProduct = lsProduct.Where(m => m.product_Name.ToLower().Contains(stringSearch.ToLower())).ToList();
+                return View(resultProduct);
+            }
+            else return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult Privacy()
         {
             return View();
@@ -108,8 +119,6 @@ namespace CellphoneStoreEcommerce.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-
 
     }
 }

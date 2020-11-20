@@ -11,16 +11,16 @@ using Microsoft.Extensions.Logging;
 
 namespace CellphoneStoreEcommerce.Models
 {
-    public class ProductCategories
+    public class Supplier
     {
         [Key]
-        [Display(Name = "Mã loại sản phẩm")]
-        public int proCategory_ID { get; set; }
+        [Display(Name = "Mã nhà cung cấp")]
+        public int nhacungcap_ID { get; set; }
 
-        [Display(Name = "Tên loại sản phẩm")]
-        public string proCategory_Name { get; set; }
+        [Display(Name = "Tên nhà cung cấp")]
+        public string nhacungcap_Name { get; set; }
 
-        // Get list of product in ProductCategories
+        // get list of products by supplier code
         public IEnumerable<Product> lsProducts { get; set; }
     }
 }

@@ -11,16 +11,20 @@ using Microsoft.Extensions.Logging;
 
 namespace CellphoneStoreEcommerce.Models
 {
-    public class NhaCungCap
+    public class Comment
     {
         [Key]
-        [Display(Name = "Mã nhà cung cấp")]
-        public int nhacungcap_ID { get; set; }
+        [Display(Name = "Mã comment")]
+        public int comment_ID { get; set; }
 
-        [Display(Name = "Tên nhà cung cấp")]
-        public string nhacungcap_Name { get; set; }
+        [Display(Name = "Nội dung comment")]
+        public string comment_Content { get; set; }
 
-        // get list of products by supplier code
-        public IEnumerable<Product> lsProducts { get; set; }
+        // Foreign Key
+        [ForeignKey("Product")]
+        public int product_ID { get; set; }
+
+        [ForeignKey("Customer")]
+        public int customer_ID { get; set; }
     }
 }
